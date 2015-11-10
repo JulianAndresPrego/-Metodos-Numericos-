@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LU</title>
+    <link href="../css/bootstrap.min.css" rel="stylesheet">
+    <link href="../css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="../css/metodo.css" rel="stylesheet">
+    <script language="javascript" type="text/javascript" src="../js/jquery.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/bootstrap.min.js"></script>
+    <script language="javascript" type="text/javascript" src="../js/handsontable.full.min.js"></script>
+    <script language="javascript" type="text/javascript" src="js/matrizSoporte.js"></script>
+    <script language="javascript" type="text/javascript" src="js/luSoporte.js"></script>
+    <script language="javascript" type="text/javascript" src="js/lu.js"></script>
+  </head>
+  <body style="background-color: cadetblue;">
+    <div class="container">
+      <div class="row">
+        <div class="page-header">
+          <h1>LU <small>Sistemas de ecuaciones lineales</small></h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-sm-6">
+          <label>Matriz A</label>
+          <div id="matrizA" style="overflow: auto"></div>
+        </div>
+        <div id="resultado" class="col-sm-2">
+          <label>Vector x</label>
+          <div id="vectorX" style="overflow: auto"></div>
+        </div>
+        <div class="col-sm-2">
+          <label>Vector b</label>
+          <div id="vectorB" style="overflow: auto"></div>
+        </div>
+        <div class="col-sm-2">
+          <button type="button" class="btn btn-primary" id="resolver" onClick="resolver()">Resolver Ax=b</button>
+          <button type="button" class="btn" id="btnInfoAdicional" onClick="mostrarInfoAdicional()">Mostrar info. adicional</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container" id="infoAdicional">
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <label>Matriz L</label>
+          <div id="matrizL"></div>
+        </div>
+        <div class="col-sm-4">
+          <label>Matriz U</label>
+          <div id="matrizU"></div>
+        </div>
+        <div class="col-sm-4">
+          <label>Vector de permutación</label>
+          <div id="vectorP"></div>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-sm-4">
+          <label>Matriz A<sup>-1</sup></label>
+          <div id="matrizAinv"></div>
+        </div>
+        <div class="col-sm-4">
+          <label>Determinante</label>
+          <div id="det"></div>
+        </div>
+
+      </div>
+    </div>
+
+    </div>
+  </body>
+</html>
